@@ -8,7 +8,17 @@ describe('TaskController', function() {
   }));
 
   it('Initialises with an empty set of tasks', function() {
-    expect(ctrl.tasks).toBeUndefined();
+    expect(ctrl.todos).toBeUndefined();
   });
+
+  it('Contains a list of toDos', function() {
+    ctrl.addToDo();
+    expect(ctrl.todos).toEqual(todos);
+  });
+
+  var todos = [{
+    content: 'Walk the dog',
+    complete: false
+  }];
 
 });
