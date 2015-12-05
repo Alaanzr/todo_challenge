@@ -1,5 +1,5 @@
 describe('TaskController', function() {
-  beforeEach(module(toDoApp));
+  beforeEach(module('toDoApp'));
 
   var ctrl;
 
