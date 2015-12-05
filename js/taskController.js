@@ -1,10 +1,10 @@
 toDoApp.controller('TaskController', function() {
   var self = this;
 
+  self.todos = [];
+
   self.addToDo = function() {
-    self.todos = [{
-      content: 'Walk the dog',
-      complete: false
-    }];
+    self.todos.push({content: self.toDoContent, complete: false});
+    self.toDoContent = '';
   };
 });

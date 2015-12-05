@@ -8,10 +8,11 @@ describe('TaskController', function() {
   }));
 
   it('Initialises with an empty set of tasks', function() {
-    expect(ctrl.todos).toBeUndefined();
+    expect(ctrl.todos).toBeEmptyArray();
   });
 
   it('Contains a list of toDos', function() {
+    ctrl.toDoContent = 'Walk the dog';
     ctrl.addToDo();
     expect(ctrl.todos).toEqual(todos);
   });
