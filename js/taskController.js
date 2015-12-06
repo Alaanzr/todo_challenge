@@ -16,4 +16,12 @@ toDoApp.controller('TaskController', function() {
   self.edit = function(todo) {
     return todo.modifyInProgress ? todo.modifyInProgress = false : todo.modifyInProgress = true;
   };
+
+  self.completeTasks = function() {
+    return self.todos.filter(function(task) { return task.complete === true;}).length;
+  };
+
+  self.activeTasks = function() {
+    return self.todos.filter(function(task) { return task.complete === false;}).length;
+  };
 });
