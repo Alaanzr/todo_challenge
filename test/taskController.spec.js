@@ -17,6 +17,13 @@ describe('TaskController', function() {
     expect(ctrl.todos).toEqual(todos);
   });
 
+  it('Deletes tasks', function() {
+    ctrl.toDoContent = 'Walk the dog';
+    ctrl.addToDo();
+    ctrl.delete(ctrl.todos[0]);
+    expect(ctrl.todos.length).toBe(0);
+  });
+
   var todos = [{
     content: 'Walk the dog',
     complete: false
