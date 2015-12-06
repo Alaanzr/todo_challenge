@@ -26,7 +26,8 @@ describe('TaskController', function() {
 
   var todos = [{
     content: 'Walk the dog',
-    complete: false
+    complete: false,
+    modifyInProgress: false
   }];
 
 });
