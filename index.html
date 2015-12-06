@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title> To Do List </title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/master.css">
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -26,7 +27,7 @@
     <br>
     <br>
     <ul class="list-group">
-      <li class="list-group-item" ng-repeat="todo in task.todos">
+      <li class="list-group-item animated bounceInLeft" ng-repeat="todo in task.todos">
         <input type="checkbox" ng-model="todo.complete"> <span ng-class="{'complete': todo.complete}"> {{todo.content}} </span>
         <span class="pull-right"> <a href="" ng-click="task.delete(todo)"> <img ng-src="images/delete.png"> </a> </span>
         <span class="pull-right"> <a href="" ng-click="task.edit(todo)"> <img ng-src="images/edit.png"> &nbsp </a> </span>
