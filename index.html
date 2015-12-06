@@ -28,8 +28,8 @@
     <ul class="list-group">
       <li class="list-group-item" ng-repeat="todo in task.todos">
         <input type="checkbox" ng-model="todo.complete"> <span ng-class="{'complete': todo.complete}"> {{todo.content}} </span>
-        <span class="pull-right"> <a href="#" ng-click="task.delete(todo)"> Delete Task </a> </span>
-        <span class="pull-right"> <a href="#" ng-click="task.edit(todo)"> Edit Task &nbsp </a> </span>
+        <span class="pull-right"> <a href="#" ng-click="task.delete(todo)"> <img ng-src="images/delete.png"> </a> </span>
+        <span class="pull-right"> <a href="#" ng-click="task.edit(todo)"> <img ng-src="images/edit.png"> &nbsp </a> </span>
         <form ng-show="todo.modifyInProgress">
           <input type="text" ng-model="todo.content">
           <button type="submit" ng-click="task.edit(todo)"> Confirm change </buton>
